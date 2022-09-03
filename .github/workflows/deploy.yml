@@ -8,13 +8,13 @@ jobs:
     name: Create Google Cloud Storage bucket
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v0.4.0'
         with:
           workload_identity_provider: 'projects/600309653001/locations/global/workloadIdentityPools/github-actions/providers/github-actions'
           service_account: 'pulumi@new-one-361319.iam.gserviceaccount.com'
-      - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
         with:
           go-version: '1.17'
