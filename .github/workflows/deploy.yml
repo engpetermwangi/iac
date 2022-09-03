@@ -5,6 +5,8 @@ on:
       - main
 jobs:
   up:
+    permissions:
+      id-token: 'write'
     name: Create Google Cloud Storage bucket
     runs-on: ubuntu-latest
     steps:
