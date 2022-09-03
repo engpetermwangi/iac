@@ -1,0 +1,3 @@
+name: new
+description: A minimal Google Cloud Go Pulumi program
+runtime: go
